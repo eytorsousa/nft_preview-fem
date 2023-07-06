@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(217, 54%, 11%);
+    display: flex;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+div#main-card {
+    background: hsl(216, 50%, 16%);
+    box-shadow: 0px 3px 24px black;
+    border-radius: 16px;
+    width: 400px;
+    height: 680px;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Outfit', sans-serif;
+    z-index: 3;
+}
+
+div#img-section {
+    margin: 20px auto;
+    width: 360px;
+    height: 360px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+div#img-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+div#img-section div#blur {
+    width: 360px;
+    height: 360px;
+    border-radius: 10px;
+    position: absolute;
+    background: hsla(178, 100%, 50%, 0.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    transition: all 550ms ease-in-out;
+}
+
+div#blur img {
+    width: 60px;
+    height: auto;
+    opacity: 0.4;
+    transition: all 400ms ease-in-out;
+}
+
+div#img-section:hover {
+    cursor: pointer;
+}
+
+div#img-section:hover div#blur {
+    z-index: 1;
+    background: hsla(178, 100%, 50%, 0.4);
+}
+
+div#img-section:hover div#blur img {
+    opacity: 1;
+}
+
+div#texts-section {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: fit-content;
+    margin: 10px auto;
+}
+
+span#title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+
+span#title:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+
+span#text {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: hsl(215, 51%, 70%);
+}
+
+div#info-section {
+    margin: 20px auto;
+    width: 360px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div#eth {
+    font-weight: 600;
+    color: hsl(178, 100%, 50%);
+    display: flex;
+    justify-content: center;
+}
+
+div#eth img {
+    margin-right: 5px;
+}
+
+div#days {
+    display: flex;
+    justify-content: center;
+    word-spacing: 2px;
+    color: hsl(215, 51%, 70%);
+}
+
+div#days img {
+    margin-right: 7px;
+}
+
+div#hr {
+    margin: 10px auto;
+    width: 360px;
+    height: 1px;
+    background: hsl(215, 32%, 27%);
+}
+
+div#profile-section {
+    width: 360px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    color: hsl(215, 51%, 70%);
+}
+
+div#profile-section img {
+    width: 30px;
+    border: solid 1px white;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+#jw {
+    margin-left: 5px;
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+
+#jw:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+
+@media (max-width: 400px) {
+    
+    div#main-card {
+        width: 90%;
+        height: fit-content;
+        padding-bottom: 20px;
+        margin: auto auto;
+        position: static;
+    }
+
+    div#img-section {
+        width: 80%;
+        margin: 5%;
+        height: auto;
+        position: absolute;
+        z-index: 2;
+    }
+
+    div#img-section div#blur {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    div#texts-section {
+        margin-top: 100%;
+        width: 100%;
+    }
+
+    span#title {
+        width: fit-content;
+        margin: 0 20px;
+    }
+
+    span#text {
+        margin: 15px 0px 0px 20px;
+        width: 90%;
+        height: fit-content;
+        font-size: 1rem;
+    }
+
+    div#info-section {
+        margin-left: 20px;
+        width: 90%;
+    }
+
+    #days {
+        margin-right: 10px;
+    }
+
+    div#hr {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    div#profile-section {
+        width: 90%;
+    }
+}
